@@ -34,6 +34,10 @@ public class ManagerTest {
 
     @Test
     public void canRaiseManagersSalary(){
+        manager.raiseSalary(10000);
+        assertEquals(60000, manager.getSalary(), 0);
+    }@Test
+    public void preventNegativeValueForRaiseSalary(){
         manager.raiseSalary(-10000);
         assertEquals(60000, manager.getSalary(), 0);
     }
